@@ -1,0 +1,476 @@
+@import url('../css/fonts.css');
+
+html,body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--abel);
+}
+:root{
+    /* Theme color */
+    --text-gray:rgb(110, 108, 108);
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#fff;
+    --midnight:#104f55;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /* theme font family */
+    --abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:'Lexend',cursive;
+    --Livvic:'Livvic',cursive;
+}
+
+
+
+
+
+
+
+/*======================global css========================*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text-gray{}
+ul{
+    list-style-type: none;
+}
+h1{
+    font-family: var(--Lexend);
+    font-size: 40px;
+}
+h2{
+    font-family: var(--Lexend);
+}
+h3{
+    font-family: var(--abel);
+    font-size: 26;
+}
+button.btn{
+    border: none;
+    border-radius: 32px;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+.container{
+    margin: 0 5vw;
+}
+.text-gray{
+ color: var(--text-gray);
+}
+/*======================global css========================*/
+
+
+
+
+
+/*======================navbar section========================*/
+.nav{
+    background: rgb(255, 255, 255);
+    padding: 0 32px;
+   height: 0rem;
+   min-height: 9vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+.nav .nav-menu{
+    justify-content: space-between;
+}
+.collaps{
+    height: 30rem;
+}
+.nav .toggle-collpase{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+.nav .toggle-collpase .toggle-icon{
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 0;
+}
+.nav .toggle-collpase .toggle-icon i{
+    font-size: 20px;
+    color: var(--text-gray);
+}
+.nav .nav-brand a{
+     font-size: 24px;
+     padding: 16px 0;
+     display: block;
+     font-family: var(--Lexend);
+     font-weight: bold;
+}
+.nav .nav-items{
+    /*list-style-type: none;*/
+    display: flex;
+    margin: 0;
+}
+.nav .nav-items .nav-link{
+    padding: 24px 16px;
+    font-size: 18px;
+    position: relative;
+}
+.nav .nav-items .nav-link:hover{
+background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+.nav .social{
+    padding: 24px 0;
+}
+.nav .social i{
+    padding: 0 6px;
+}
+.nav .social i:hover{
+    color: rgba(24, 54, 224, 0.925);
+}
+/*======================navbar section end========================*/
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav .nav-items{
+        
+        flex-direction: column;
+    }/* nav menu soja korar jono (.nav .nav-items)*/
+    .nav .toggle-collpase{
+        display: initial;
+    }
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+}
+/*======================responsive less then or equal to 750px========================*/
+
+
+/*======================main section========================*/
+
+main{}
+main .site-title{
+    background: url('../assets/Background-image.png');
+    background-size: cover;
+    height: 108vh;
+    display: flex;
+    justify-content: center;
+}
+main .site-background{
+    padding: 160px;
+    text-align: center;
+    color: var(--white);
+}
+main .site-background h3,h1{
+    margin: 10px;
+}
+main .site-background .btn{
+    margin: 28px;
+    background: var(--sky);
+}
+main .site-background .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color:var(--white);
+}
+/*======================main section end========================*/
+/*======================blog section ========================*/
+main .blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+main .blog .blog-post{
+    padding: 8rem 1rem;
+}
+main .blog .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+main .blog .blog-post .blog-content img{}
+main .blog .blog-post .blog-content .blog-title{
+    padding: 32px 0;
+
+}
+main .blog .blog-post .blog-content h3{}
+main .blog .blog-post .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+main .blog .blog-post .blog-content span{
+    display: block;
+    font-family: var(--abel);
+}
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+.owl-nav .owl-prev .owl-nav-prev, 
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--text-light);
+}
+/*======================blog section end========================*/
+/*======================site content========================*/
+main .site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+main .post-content{
+    width: 100%;
+}
+main .site-content .post-content > .post-image, .post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+main.site-content.post-content>.post-image, .post-info {
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem;
+}
+main .site-content .post-content > .post-image> div{
+   overflow: hidden;
+   
+}
+main .site-content .post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+main .site-content .post-content > .post-image .img:hover{
+    transform: scale(1.3);
+}
+.post-info span{
+    margin: 0 .5rem;
+}
+main .post-title a{
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+}
+main .post-btn{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--sky);
+}
+.site-content .pagination{
+    justify-content: center;
+    color:var(--text-gray);
+    margin: 4rem 0;
+}
+.site-content .pagination a{
+    padding: .6rem 1rem;
+    border-radius: 2rem;
+    margin: 0;
+}
+.site-content .pagination .pages{
+    background: var(--text-gray);
+    color: var(--white);
+}
+/*sidebar*/
+main .sidebar{}
+main .sidebar .catagory{}
+main .sidebar .catagory h1{}
+main .sidebar .catagory .catagory-list{
+    font-family: var(--Livvic);
+}
+main .sidebar .catagory .catagory-list{}
+main .sidebar .catagory .catagory-list .list-item{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+main .sidebar .catagory .catagory-list .list-item a{
+    color: black;
+    font-weight: 600;
+}
+main .sidebar .popular-post .post-content{
+    padding: 1rem 0;
+}
+main .sidebar .popular-post h2{
+    padding-top: 8rem;
+}
+main .sidebar .popular-post .post-info{
+ padding: .4rem .1rem;
+ bottom: 0rem;
+ left: 1rem;
+ border-radius: 0rem;
+ background: var(--white);
+}
+/*sidebar end*/
+/*======================site content end========================*/
+/*======================newsletter========================*/
+main .newsletter{
+    padding-top: 3rem;
+}
+main .newsletter input{
+    padding: .5rem 2rem;
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-size: 1rem;
+    font-family: var(--Lexend);
+}
+main .newsletter button{}
+main .newsletter .form-btn{
+    border-radius: 0;
+    padding: .8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+main .popular{
+    padding: 5rem 0;
+}
+main .popular .tags{
+    
+}
+main .popular .tag{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: 1rem .6rem;
+}
+/*======================newsletter end========================*/
+/*======================footer ========================*/
+footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+footer .container{
+    display: grid;
+    /*grid-template-columns:25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(4, 1fr);
+}
+c
+footer .about-us{}
+footer h2{
+    color: var(--white);
+}
+footer p{
+    color: var(--white);
+}
+footer .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
+footer .newsletter .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+footer .newsletter h2{}
+footer .instagram{}
+footer .instagram div>img{
+display: inline-block;
+width: 25%;
+height: 50%;
+margin: .3rem .4rem;
+}
+footer .follow div i{
+    color: var(--white);
+    padding:0 .4rem;
+}
+footer .rights{
+    justify-content: center;
+    font-family: var(--Josefin);
+}
+footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+footer .move-up span{
+    color: var(--midnight);
+}
+footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+footer .move-up span i{}
+/*======================footerend ========================*/
+/*===============responsive 1130px ================*/
+@media only screen and (max-width:1130px){
+    main.site-content.post-content>.post-image, .post-info {
+        bottom: 1.3rem;
+        left: 2rem !important;
+        border-radius: 0%;
+    }
+    main .sidebar .popular-post .post-info {
+       
+        display: none;
+    }
+    footer .container {
+    
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:750px){
+    
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+    footer .container {
+    
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width:520px){
+    main .blog{
+        height: 125vh;
+    }
+    footer .container> div{
+       
+        padding: 1rem .9rem;
+    }
+}
+/*===============responsive 1130px end================*/
+
+
+
+
+
+
+
+
+
